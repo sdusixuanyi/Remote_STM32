@@ -1,0 +1,29 @@
+硬件管脚口连接：
+
+四路按键控制：
+			KEY0->PB12
+			KEY1->PB13
+			KEY2->PB14
+			KEY3->PB15
+四路拨码开关：
+			SWITCH0->PA0
+			SWITCH1->PA1
+			SWITCH2->PA2
+			SWITCH3->PA3
+液晶显示屏：
+			SDA->PB10
+			SCL->PB110
+四路LED数码管显示：
+			LED0->PB12
+			LED1->PB13
+			LED2->PB14
+			LED3->PB15
+一路蜂鸣器报警：
+			FMQ->PB1 TIM3_CH4
+nrf模块引脚
+			CE->PA4
+			SCK->PA5
+			MISO->PA6
+			MOSI->PA7
+			CS->PC4
+			IRQ中断控制引脚，不适用

@@ -1,0 +1,32 @@
+key.c
+void KEY_Init(void)     按键初始化程序PB12-PB15
+u8 KEY_Scan(u8 mode)	按键值获取函数，优先级PB12>PB13>PB14>PB15
+
+led.c
+void LED_Init(void);//初始
+void LED_ON(u8 num);//点亮LED
+void LED_OFF(u8 num);//关闭LED
+void LED_Water(u16 tms);//LED流水
+void LED_Turn(u8 num,u16 tms);//led以tms间隔进行闪烁
+
+switch.c
+void Switch_Init(void)     按键初始化程
+u8 Switch_Scan(void)		取值函数
+
+24l01.c
+void NRF24L01_Init(void);//初始化nrf24l01，中包括对spi1的初始化过程
+void NRF24L01_RX_Mode(void);//配置为接收模式
+void NRF24L01_TX_Mode(void);//配置为发送模式
+u8 NRF24L01_Write_Buf(u8 reg, u8 *pBuf, u8 u8s);//写数据区
+u8 NRF24L01_Read_Buf(u8 reg, u8 *pBuf, u8 u8s);//读数据区		  
+u8 NRF24L01_Read_Reg(u8 reg);			//读寄存器
+u8 NRF24L01_Write_Reg(u8 reg, u8 value);//写寄存器
+u8 NRF24L01_Check(void);//检查24L01是否存在，返回为0则存在，为1则不存在
+u8 NRF24L01_TxPacket(u8 *txbuf);//发送一个包的数据，txbuf为发送文件的首地址，返回如果为MAX_TX为达到最大发送数据，TX_OK为发送完成，0xff其他原因发送失败
+u8 NRF24L01_RxPacket(u8 *rxbuf);//接收一个包的数据，rxbuf为接收到数据的首地址，返回0代表完成接收
+
+beep.c
+void Beep_Init(void);//初始化通道PB1
+void Beep_ON(u8 mode,u8 num);
+void Beep_OFF(void );
+
