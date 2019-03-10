@@ -29,22 +29,27 @@ void Init()
 	int main(void)
  {
 //	u16 t=0;			 
-//	u8 tmp_buf[33]="sagjasitfefryiwfkjd"; 
+	u8 tmp_buf[33]="sagjasitfefryiwfkjd"; 
 	Init();
 	 OLED_ShowCHinese(0,0,0);
-// 	while(NRF24L01_Check())	//检查NRF24L01是否在位.	
-//	{
-//		delay_ms(200);
-//		LED_ON(1);
-//	}
-//	 NRF24L01_TX_Mode();	
+ 	while(NRF24L01_Check())	//检查NRF24L01是否在位.	
+	{
+		delay_ms(200);
+		GPIO_ResetBits(GPIOC,GPIO_Pin_13);	
+	}
+	 NRF24L01_TX_Mode();
+		GPIO_ResetBits(GPIOC,GPIO_Pin_13);		
 	 while(1)
 	 {
-//			NRF24L01_TxPacket(tmp_buf);
+			NRF24L01_TxPacket(tmp_buf);
 //		 OLED_Clear();
 //		OLED_ShowCHinese(126,0,0);//?
-		 if (Switch0 == 1)
-			LED_Water (500);
+//		 if (Switch0 == 1)
+//			LED_Water (500);
+		 GPIO_ResetBits(GPIOC,GPIO_Pin_13);	
+		 delay_ms(1000);
+		 GPIO_SetBits(GPIOC,GPIO_Pin_13);	
+		 delay_ms(1000);
 	 }		
 }
 
