@@ -15,8 +15,8 @@
 #define X_WIDTH 	128
 #define Y_WIDTH 	64	    						  
 //-----------------OLED端口定义----------------  					   
-#define OLED_CS_Clr()  GPIO_ResetBits(GPIOB,GPIO_Pin_12)//CS
-#define OLED_CS_Set()  GPIO_SetBits(GPIOB,GPIO_Pin_12)
+//#define OLED_CS_Clr()  GPIO_ResetBits(GPIOB,GPIO_Pin_12)//CS，使用时可以直接接地，也可以作为位选使用
+//#define OLED_CS_Set()  GPIO_SetBits(GPIOB,GPIO_Pin_12)
 
 #define OLED_RST_Clr() GPIO_ResetBits(GPIOB,GPIO_Pin_4)//RES
 #define OLED_RST_Set() GPIO_SetBits(GPIOB,GPIO_Pin_4)
@@ -25,10 +25,10 @@
 #define OLED_DC_Set() GPIO_SetBits(GPIOB,GPIO_Pin_5)
 
 #define OLED_SCLK_Clr() GPIO_ResetBits(GPIOB,GPIO_Pin_10)//CLK\D0
-#define OLED_SCLK_Set() GPIO_SetBits(GPIOB,GPIO_Pin_11)
+#define OLED_SCLK_Set() GPIO_SetBits(GPIOB,GPIO_Pin_10)
 
 #define OLED_SDIN_Clr() GPIO_ResetBits(GPIOB,GPIO_Pin_11)//DIN\D1
-#define OLED_SDIN_Set() GPIO_SetBits(GPIOB,GPIO_Pin_10)
+#define OLED_SDIN_Set() GPIO_SetBits(GPIOB,GPIO_Pin_11)
 
  		     
 #define OLED_CMD  0	//写命令
