@@ -177,15 +177,15 @@ void OLED_Init(void)
  	 
  	GPIO_InitTypeDef  GPIO_InitStructure;
  	
- 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);	 //使能PC端口时钟
+ 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);	 //使能PC端口时钟
 
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_1|GPIO_Pin_11|GPIO_Pin_12;	 //PD3,PD6推挽输出  
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_10|GPIO_Pin_11;	 //PD3,PD6推挽输出  
  	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 		 //推挽输出
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;//速度50MHz
- 	GPIO_Init(GPIOC, &GPIO_InitStructure);	  //初始化GPIOD3,6
- 	GPIO_SetBits(GPIOC,GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_1|GPIO_Pin_11|GPIO_Pin_12);	//PD3,PD6 输出高
+ 	GPIO_Init(GPIOB, &GPIO_InitStructure);	  //初始化GPIOD3,6
+ 	GPIO_SetBits(GPIOB,GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_10|GPIO_Pin_11);	//PD3,PD6 输出高
 
-  OLED_RST_Set();
+	OLED_RST_Set();
 	delay_ms(100);
 	OLED_RST_Clr();
 	delay_ms(100);

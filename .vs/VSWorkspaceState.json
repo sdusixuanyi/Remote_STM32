@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\HARDWARE",
-    "\\HARDWARE\\scr"
+    "\\HARDWARE\\inc",
+    "\\HARDWARE\\scr",
+    "\\README"
   ],
-  "SelectedNode": "\\HARDWARE\\scr\\flash.c",
+  "SelectedNode": "\\HARDWARE\\scr\\oled.c",
   "PreviewInSolutionExplorer": false
 }

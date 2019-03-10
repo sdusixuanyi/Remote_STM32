@@ -31,10 +31,12 @@
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\main.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\main.o: ..\SYSTEM\delay\delay.h
-..\obj\main.o: ..\SYSTEM\usart\usart.h
-..\obj\main.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\HARDWARE\inc\key.h
 ..\obj\main.o: ..\HARDWARE\inc\spi.h
 ..\obj\main.o: ..\HARDWARE\inc\24l01.h
 ..\obj\main.o: ..\HARDWARE\inc\switch.h
 ..\obj\main.o: ..\HARDWARE\inc\beep.h
+..\obj\main.o: ..\HARDWARE\inc\adc.h
+..\obj\main.o: ..\HARDWARE\inc\oled.h
+..\obj\main.o: D:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\main.o: ..\HARDWARE\inc\exti.h

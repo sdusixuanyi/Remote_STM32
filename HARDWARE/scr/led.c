@@ -61,10 +61,10 @@ void LED_Turn(u8 num,u16 tms)
 {
 	switch(num)
 	{
-		case 1:LED_ON(0);delay_ms(tms);LED_OFF(0);break;
-		case 2:LED_ON(1);delay_ms(tms);LED_OFF(1);break;
-		case 3:LED_ON(2);delay_ms(tms);LED_OFF(2);break;
-		case 4:LED_ON(3);delay_ms(tms);LED_OFF(3);break;
+		case 0:LED_ON(0);delay_ms(tms);LED_OFF(0);break;
+		case 1:LED_ON(1);delay_ms(tms);LED_OFF(1);break;
+		case 2:LED_ON(2);delay_ms(tms);LED_OFF(2);break;
+		case 3:LED_ON(3);delay_ms(tms);LED_OFF(3);break;
 		default :delay_us(tms);break;
 	}
 }

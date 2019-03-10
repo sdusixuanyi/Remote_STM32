@@ -1,5 +1,5 @@
 Dependencies for Project '24L01', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5C0240AC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5C838DB5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\HARDWARE\inc\led.h)(0x5C837925)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5BE55282)
@@ -31,13 +31,15 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\SYSTEM\delay\delay.h)(0x55CC2E59)
-I (..\SYSTEM\usart\usart.h)(0x50517A82)
-I (D:\keil\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\HARDWARE\inc\key.h)(0x5C83797A)
 I (..\HARDWARE\inc\spi.h)(0x532D27CD)
 I (..\HARDWARE\inc\24l01.h)(0x5C02533F)
 I (..\HARDWARE\inc\switch.h)(0x5C8379DD)
 I (..\HARDWARE\inc\beep.h)(0x5BE67211)
+I (..\HARDWARE\inc\adc.h)(0x5C76736C)
+I (..\HARDWARE\inc\oled.h)(0x5C8389A6)
+I (D:\keil\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (..\HARDWARE\inc\exti.h)(0x532AF1A5)
 F (.\stm32f10x_it.c)(0x4EBEACB0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x4D99A426)
 I (stm32f10x.h)(0x5BE55282)
@@ -164,7 +166,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\SYSTEM\delay\delay.h)(0x55CC2E59)
-F (..\HARDWARE\scr\led.c)(0x5C837925)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
+F (..\HARDWARE\scr\led.c)(0x5C838B1B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
 I (..\HARDWARE\inc\led.h)(0x5C837925)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5BE55282)
@@ -357,8 +359,8 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\HARDWARE\inc\spi.h)(0x532D27CD)
 I (..\SYSTEM\delay\delay.h)(0x55CC2E59)
-F (..\HARDWARE\scr\oled.c)(0x5C837B47)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\oled.o --omf_browse ..\obj\oled.crf --depend ..\obj\oled.d)
-I (..\HARDWARE\inc\oled.h)(0x5C6EC5F9)
+F (..\HARDWARE\scr\oled.c)(0x5C838415)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\oled.o --omf_browse ..\obj\oled.crf --depend ..\obj\oled.d)
+I (..\HARDWARE\inc\oled.h)(0x5C8389A6)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5BE55282)
 I (..\CORE\core_cm3.h)(0x4D523B58)
@@ -391,7 +393,7 @@ I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (D:\keil\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\HARDWARE\inc\oledfont.h)(0x5C6EC4DE)
 I (..\SYSTEM\delay\delay.h)(0x55CC2E59)
-F (..\HARDWARE\scr\exti.c)(0x53301A0E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
+F (..\HARDWARE\scr\exti.c)(0x5C83C110)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\inc-I C:\Users\Administrator\Documents\GitHub\Remote_STM32\USER\RTE-I D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
 I (..\HARDWARE\inc\exti.h)(0x532AF1A5)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5BE55282)
@@ -785,5 +787,5 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 F (..\readme\guanjiao.txt)(0x5BEF736B)()
-F (..\readme\readme.txt)(0x5BE672F9)()
+F (..\readme\readme.txt)(0x5C8381A8)()
 F (..\readme\ÎÄ¼þº¯Êý.txt)(0x5BE671B0)()
